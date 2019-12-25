@@ -32,7 +32,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @ExtendWith(SpringExtension.class)
 @AutoConfigureMockMvc
 @Slf4j
-//@Testcontainers
 public class MongoDbContainerTest {
 
     @Autowired
@@ -42,13 +41,7 @@ public class MongoDbContainerTest {
     @Autowired
     private FruitRepository fruitRepository;
 
-   private static MongoDbContainer mongoDbContainer;
-
-   /* @Container
-   public static final GenericContainer mongoDbContainer =  new GenericContainer("mongo:4.0")
-            .withExposedPorts(27017);
-*/
-
+    private static MongoDbContainer mongoDbContainer;
 
     @BeforeAll
     public static void startContainerAndPublicPortIsAvailable() {
